@@ -55,7 +55,9 @@ export default function Header() {
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 md:static md:inset-auto md:ml-6 md:pr-0">
                 {/* Profile dropdown */}
                 <div className="hidden md:ml-6 md:block px-3">
-                  <div className="flex space-x-4"></div>
+                  <div className="flex space-x-4">
+                    <Link href="/apartments"> Apartments </Link>
+                  </div>
                 </div>
                 <Menu as="div" className="relative ml-3">
                   <div>
