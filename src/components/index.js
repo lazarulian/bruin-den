@@ -8,3 +8,4 @@ export { default as Landing } from "./Landing";
 
 export { default as Table } from "./Apartments/Table";
 export { default as TableEntry } from "./Apartments/TableEntry";
+export { default as AddApartment } from "./Apartments/AddApartment";

@@ -27,10 +27,7 @@ const Table = () => {
 
   useEffect(() => {
     const getApartments = async () => {
-      const q = query(
-        collection(db, "apartments"),
-        where("year", "==", "2022")
-      );
+      const q = query(collection(db, "apartments"));
       const data = await getDocs(q);
       // const data = await getDocs(apartmentsCollectionRef);
       setApartments(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
