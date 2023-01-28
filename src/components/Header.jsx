@@ -12,10 +12,10 @@ export default function Header() {
     return classes.filter(Boolean).join(" ");
   }
   return (
-    <Disclosure as="nav" className="mb-4 bg-gray-200">
+    <Disclosure as="nav" className=" bg-gray-200">
       {({ open }) => (
         <>
-          <div className="container lg:mx-auto lg:px-10 mb-8">
+          <div className="container lg:mx-auto lg:px-10">
             <div className="relative flex h-16 items-center justify-between">
               <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
                 {/* Mobile menu button*/}
