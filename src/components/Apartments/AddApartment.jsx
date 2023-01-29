@@ -12,12 +12,14 @@ const AddApartment = () => {
   const [newStreetName, setNewStreetName] = useState("");
   const [numBath, setNumBath] = useState("");
   const [numBed, setNumBed] = useState("");
+  const [uploaded, setUpload] = useState(false);
 
   const convertInt = (data) => {
     return parseInt(data);
   };
 
   const createApartment = async () => {
+    setUpload(true);
     await addDoc(apartmentsCollectionRef, {
       address: newAddress,
       rating: convertInt(newRating),
@@ -94,12 +96,15 @@ const AddApartment = () => {
       />
       <br></br>
 
-      <button
-        className="bg-gray-200 rounded-md p-3 m-2 hover:bg-gray-600 hover:text-white duration-200"
-        onClick={createApartment}
-      >
-        Create Apartment
-      </button>
+      {numBath && (
+        <button
+          id="myButton"
+          className="bg-gray-200 rounded-md p-3 m-2 hover:bg-gray-600 hover:text-white duration-200"
+          onClick={createApartment}
+        >
+          Create Apartment
+        </button>
+      )}
     </form>
   );
 };

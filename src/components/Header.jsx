@@ -22,26 +22,29 @@ export default function Header() {
 
       <div className="col col-span-2 flex items-center justify-center">
         <Link href="/about">
-          <span class="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
+          <span className="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
             {" "}
             about
           </span>
         </Link>
         <Link href="/apartments">
-          <span class="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
+          <span className="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
             {" "}
             apartments
           </span>
         </Link>
         <Link href="/add-apartment">
           {/* change to create listing */}
-          <span class="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
+          <span className="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
             {" "}
             add lease
           </span>
         </Link>
-        <Link href='/resources'>
-        <span class = "font-serif align-text-bottom pr-5 hover:text-red-300 duration-300"> resources </span>
+        <Link href="/resources">
+          <span className="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
+            {" "}
+            resources{" "}
+          </span>
         </Link>
       </div>
 
