@@ -38,25 +38,11 @@ const process = async () => {
     const errorMessage = error.message;
     const email = error.email; // The email of the user's account used.
     const credential = GoogleAuthProvider.credentialFromError(error); // The AuthCredential type that was used.
+  
   }
 };
 
 const login = () => {
-  // const signIn = () => {
-  //   signInWithRedirect(auth, provider)
-  //   .then((result) => {
-  //     const name = result.user.displayName;
-  //     const email = result.user.email;
-  //   })
-  //   .catch((error) =>{
-  //     alert("Invalid Login");
-  //   })
-
-  // }
-
-  // const logout = () => {
-  //   signOut(auth);
-  // };
 
   return (
     <div className="p-8 m-8 justify-center">
