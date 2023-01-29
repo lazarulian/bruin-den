@@ -1,13 +1,13 @@
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getAuth } from "firebase/auth";
+import { getFirestore, addDoc } from "firebase/firestore";
+  
+import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
+import React from "react";
+import { LoginForm, RegisterUser } from "@/components";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+
+// web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB7DJzlSfb1MXxGPIMzY-XZDWN-aNcyCdU",
   authDomain: "bruin-den.firebaseapp.com",
@@ -20,51 +20,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
+const db = getFirestore(app);
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
-const logInWithEmailAndPassword = async (email, password) => {
-  try {
-    await signInWithEmailAndPassword(auth, email, password);
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
-
-const registerWithEmailAndPassword = async (name, email, password) => {
-  try {
-    const res = await createUserWithEmailAndPassword(auth, email, password);
-    const user = res.user;
-    await addDoc(collection(db, "users"), {
-      uid: user.uid,
-      name,
-      authProvider: "local",
-      email,
-    });
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
-
-const sendPasswordReset = async (email) => {
-  // password reset email sent by Firebase
-  try {
-    await sendPasswordResetEmail(auth, email);
-    alert("Password reset link sent!");
-  } catch (err) {
-    console.error(err);
-    alert(err.message);
-  }
-};
-
-const logout = () => {
-  signOut(auth);
-};
-
-// if (!Firebase.apps.length) {
-//   Firebase.initializeApp(FirebaseCredentials);
-// }
-
-// export default Firebase;
+export {db, auth, provider};
