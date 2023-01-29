@@ -6,9 +6,11 @@ import {
   signInWithRedirect,
   GoogleAuthProvider,
   getRedirectResult,
+  signOut
 } from "firebase/auth";
 import { db, auth, provider } from "/src/firebase-config.js";
 import "/src/firebase-config.js";
+
 
 const process = async () => {
   signInWithPopup(auth, provider);
@@ -36,19 +38,31 @@ const process = async () => {
   }
 };
 
-const login = () => {
 
+const login = () => {
   return (
-    <div className="p-8 m-8 justify-center">
-      <h1 className="text-3xl font-semibold">Login Here</h1>
-      <button className="LoginButton" onClick={process}>
+    <div className="mx-12 px-8 my-8">
+      <div className="grid lg:grid-cols-3 lg:gap-3">
+        <div className="col-span 1" />
+        <div className="text-center m-8 p-8 bg-slate-300 rounded-xl">
+          <h1 className="font-semibold text-gray-700 text-4xl pb-4">
+            Login
+          </h1>
+          <LoginForm />
+          <div className="p-8 m-8 justify-center">
+        <button className="googleButton" onClick={process}>
         {" "}
-        Login with Google!{" "}
-      </button>
+        <img src="https://developers.google.com/static/identity/images/btn_google_signin_light_normal_web.png" alt="Google icon"/>   {" "}
+        </button>
     </div>
+        </div>
+        
+        <div className="col-span-1" />
+      </div>
+      
+    </div>
+    
   );
 };
 
 export default login;
-
-// export default {login, logout};
