@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { db } from "../../firebase-config";
 import { collection, getDocs, addDoc, where, query } from "firebase/firestore";
 
+
 const AddApartment = () => {
   const apartmentsCollectionRef = collection(db, "apartments");
   const [newAddress, setNewAddress] = useState("");
@@ -27,6 +28,7 @@ const AddApartment = () => {
       beds: convertInt(numBed),
       baths: convertInt(numBath),
     });
+  
   };
   return (
     <div>
