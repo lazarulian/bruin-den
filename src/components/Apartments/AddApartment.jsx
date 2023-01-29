@@ -29,11 +29,12 @@ const AddApartment = () => {
     });
   };
   return (
-    <div>
+    <form>
       <input
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         placeholder="Apartment"
         type="text"
+        required
         onChange={(event) => {
           setNewAddress(event.target.value);
         }}
@@ -42,6 +43,7 @@ const AddApartment = () => {
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
         placeholder="Rent"
+        required
         onChange={(event) => {
           setNewRent(event.target.value);
         }}
@@ -50,6 +52,7 @@ const AddApartment = () => {
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
         placeholder="Year"
+        required
         onChange={(event) => {
           setNewYear(event.target.value);
         }}
@@ -58,6 +61,7 @@ const AddApartment = () => {
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
         placeholder="Rating"
+        required
         onChange={(event) => {
           setNewRating(parseInt(event.target.value));
         }}
@@ -65,6 +69,7 @@ const AddApartment = () => {
       <input
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         placeholder="Street Name"
+        required
         onChange={(event) => {
           setNewStreetName(event.target.value.toLowerCase());
         }}
@@ -73,6 +78,7 @@ const AddApartment = () => {
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
         placeholder="Number of Beds"
+        required
         onChange={(event) => {
           setNumBed(parseInt(event.target.value));
         }}
@@ -81,21 +87,20 @@ const AddApartment = () => {
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
         placeholder="Number of Baths"
+        required
         onChange={(event) => {
           setNumBath(parseInt(event.target.value));
         }}
       />
       <br></br>
-      
+
       <button
         className="bg-gray-200 rounded-md p-3 m-2 hover:bg-gray-600 hover:text-white duration-200"
         onClick={createApartment}
       >
-        
         Create Apartment
       </button>
-      
-    </div>
+    </form>
   );
 };
 
