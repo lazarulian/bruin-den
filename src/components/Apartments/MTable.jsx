@@ -47,7 +47,7 @@ const MTable = () => {
                 <TableCell component="th" scope="apartment">
                   {apartment.address}
                 </TableCell>
-                <TableCell align="right">{apartment.rent}</TableCell>
+                <TableCell align="right">${apartment.rent}</TableCell>
                 <TableCell align="right">
                   <Rating name="read-only" value={apartment.rating} readOnly />
                 </TableCell>
