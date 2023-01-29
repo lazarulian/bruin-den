@@ -7,7 +7,7 @@ import Stress from "../../../public/assets/stress.png"
 
 const Facts = () => {
   return (
-    <div className='bg-blue-200 grid grid-cols-6 gap-2 pt-20'>
+    <div className='bg-sky-900 grid grid-cols-6 gap-2 pt-20'>
         <div className='col col-span-2 flex items-center justify-center'>
          <Image src={Rainbow}  height={159} alt="Rainbow" />
         </div>
