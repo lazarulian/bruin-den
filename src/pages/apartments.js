@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Table } from "@/components";
+import { MTable } from "@/components";
 
 const apartments = () => {
   return (
@@ -16,7 +16,7 @@ const apartments = () => {
           </button>
         </div>
       </div>
-      <Table />
+      <MTable />
     </div>
   );
 };
