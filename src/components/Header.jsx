@@ -50,7 +50,9 @@ export default function Header() {
         <Link href="/">
           <BiHomeAlt className="mx-1" />
         </Link>
-        <BiUser className="mx-1" />
+        <Link href="/login">
+          <BiUser className="mx-1" />
+        </Link>
         <BiWorld className="mx-1" />
       </div>
     </div>
