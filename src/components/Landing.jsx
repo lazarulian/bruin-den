@@ -1,13 +1,14 @@
+import { MissedVideoCallOutlined } from "@mui/icons-material";
 import React from "react";
 import { Banner } from "./";
-import { Apartments } from "./";
+import { Mission } from "./";
 import { Couches } from "./";
 
 const Landing = () => {
   return (
     <div>
       <Banner />
-      <Apartments />
+      <Mission />
       <Couches />
     </div>
   );
