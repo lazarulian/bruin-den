@@ -5,7 +5,7 @@ import BannerImage from "../../../public/assets/BufferImage@3x.png"
 const Banner = () => {
   return (
     <div className="w-screen">
-        <Image src={BannerImage}  alt="Banner"/>
+        <Image src={BannerImage} alt="Banner"/>
     </div>
   );
 };
