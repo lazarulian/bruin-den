@@ -32,7 +32,6 @@ const process = async() => {
     const errorMessage = error.message;
     const email = error.email; // The email of the user's account used.
     const credential = GoogleAuthProvider.credentialFromError(error); // The AuthCredential type that was used.
-
   }; 
   
 }
