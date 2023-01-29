@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import { LoginForm, RegisterUser } from "@/components";
-import { getAuth, signInWithPopup, signInWithRedirect, GoogleAuthProvider, getRedirectResult } from "firebase/auth";
-import {db, auth, provider} from "/src/firebase-config.js";
+import {
+  getAuth,
+  signInWithPopup,
+  signInWithRedirect,
+  GoogleAuthProvider,
+  getRedirectResult,
+} from "firebase/auth";
+import { db, auth, provider } from "/src/firebase-config.js";
 import "/src/firebase-config.js";
 
-
-const process = async() => {
-  signInWithPopup(auth,provider)
+const process = async () => {
+  signInWithPopup(auth, provider);
 
   // .then((result) => {
   //   // gives a Google Access Token, used to access the Google API.
@@ -27,17 +32,22 @@ const process = async() => {
         email: user.email,
       });
     }
-  } catch(error)  { // error handling
+  } catch (error) {
+    // error handling
     const errorCode = error.code;
     const errorMessage = error.message;
     const email = error.email; // The email of the user's account used.
     const credential = GoogleAuthProvider.credentialFromError(error); // The AuthCredential type that was used.
+<<<<<<< HEAD
   }; 
   
 }
+=======
+  }
+};
+>>>>>>> f4148767e611cf090d01b256c14c422837bf4079
 
 const login = () => {
-
   // const signIn = () => {
   //   signInWithRedirect(auth, provider)
   //   .then((result) => {
@@ -47,24 +57,24 @@ const login = () => {
   //   .catch((error) =>{
   //     alert("Invalid Login");
   //   })
-    
-  // }
 
+  // }
 
   // const logout = () => {
   //   signOut(auth);
   // };
 
-  
   return (
-    <div className='p-8 m-8 justify-center'>
-        <h1 className='text-3xl font-semibold'>Login Here</h1>
-        <button className= "LoginButton" onClick={process}> Login with Google! </button>
+    <div className="p-8 m-8 justify-center">
+      <h1 className="text-3xl font-semibold">Login Here</h1>
+      <button className="LoginButton" onClick={process}>
+        {" "}
+        Login with Google!{" "}
+      </button>
     </div>
-  )
-}
+  );
+};
 
-export default login
-
+export default login;
 
 // export default {login, logout};
