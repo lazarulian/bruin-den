@@ -10,14 +10,14 @@ const Mission = () => {
         <h1 className="text-6xl">OUR MISSION</h1>
         <p className="mx-10 mt-10">
           Our mission is to promote equity and accessibility in housing for
-          marginalized students at UCLA by providing support and resources to
+          marginalized students at UCLA by providing a resource to
           ensure that all students have access to safe and affordable housing
-          options that meet their unique needs and circumstances.
+          options that meet their unique circumstances.
         </p>
         <br />
         <p className="mb-7">
           We believe that transparency is the key to preventing exploitation and
-          unfair practices that occur daily within the realty realm. Learn more
+          unfair practices that occur daily within the real estate realm. Learn more
           below.
         </p>
         <Link href="/about">
