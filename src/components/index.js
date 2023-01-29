@@ -1,6 +1,6 @@
 export { default as Header } from "./Header";
 export { default as Layout } from "./Layout";
-export { default as Apartments } from "./Home/Apartments";
+export { default as Mission } from "./Home/Mission";
 export { default as Banner } from "./Home/Banner";
 export { default as Couches } from "./Home/Couches";
 export { default as Landing } from "./Landing";
