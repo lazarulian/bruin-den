@@ -14,7 +14,7 @@ import Rating from "@mui/material/Rating";
 
 const MTable = ({ ApartmentProp }) => {
   return (
-    <div className="text-center mx-8 my-2 py-6 bg-slate-50 rounded-lg h-screen">
+    <div className="text-center mx-8 my-2 py-6 rounded-lg h-screen">
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
