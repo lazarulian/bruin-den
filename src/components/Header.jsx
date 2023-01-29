@@ -15,7 +15,9 @@ export default function Header() {
   return (
     <div className="bg-gray-200 grid grid-cols-6 gap-2 h-70">
       <div className="col col-span-2 h-full pl-8">
-        <Image src={Logo} width={70} height={70} alt="Logo" />
+        <Link href="/">
+          <Image src={Logo} width={70} height={70} alt="Logo" />
+        </Link>
       </div>
 
       <div className="col col-span-2 flex items-center justify-center">
