@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { db } from "../../firebase-config";
 import { collection, getDocs, addDoc, where, query } from "firebase/firestore";
 
-
 const AddApartment = () => {
   const apartmentsCollectionRef = collection(db, "apartments");
   const [newAddress, setNewAddress] = useState("");
@@ -13,14 +12,12 @@ const AddApartment = () => {
   const [newStreetName, setNewStreetName] = useState("");
   const [numBath, setNumBath] = useState("");
   const [numBed, setNumBed] = useState("");
-  const [uploaded, setUpload] = useState(false);
 
   const convertInt = (data) => {
     return parseInt(data);
   };
 
   const createApartment = async () => {
-    setUpload(true);
     await addDoc(apartmentsCollectionRef, {
       address: newAddress,
       rating: convertInt(newRating),
@@ -30,10 +27,10 @@ const AddApartment = () => {
       beds: convertInt(numBed),
       baths: convertInt(numBath),
     });
-  
   };
+
   return (
-    <form>
+    <div>
       <input
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         placeholder="Apartment"
@@ -97,17 +94,13 @@ const AddApartment = () => {
         }}
       />
       <br></br>
-
-      {numBath && (
-        <button
-          id="myButton"
-          className="bg-gray-200 rounded-md p-3 m-2 hover:bg-gray-600 hover:text-white duration-200"
-          onClick={createApartment}
-        >
-          Create Apartment
-        </button>
-      )}
-    </form>
+      <button
+        className="bg-gray-200 rounded-md p-3 m-2 hover:bg-gray-600 hover:text-white duration-200"
+        onClick={createApartment}
+      >
+        Create Apartment
+      </button>
+    </div>
   );
 };
 
