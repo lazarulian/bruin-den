@@ -1,15 +1,15 @@
 import React from 'react'
-import { AboutUs } from "./";
-import { Facts} from "./";
-import { Info } from "./";
+import { House, AboutUs, Facts, Info } from './'
 
 const About = () => {
   return (
-    <div>About</div>
-     <AboutUs />
-      <Facts />
-      <Info />
-  )
+    <div>
+        <House />
+        <AboutUs />
+        <Facts />
+        <Info />
+    </div>
+  );
 }
 
 export default About

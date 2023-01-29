@@ -1,9 +1,17 @@
+//homePage Imports
 export { default as Header } from "./Header";
 export { default as Layout } from "./Layout";
 export { default as Mission } from "./Home/Mission";
 export { default as Banner } from "./Home/Banner";
 export { default as Couches } from "./Home/Couches";
 export { default as Landing } from "./Landing";
+
+//aboutUs Imports
+export { default as AboutUs } from "./About/AboutUs";
+export { default as Facts } from "./About/Facts";
+export { default as Info } from "./About/Info";
+export { default as House} from "./About/House";
+export { default as About } from "./About";
 
 // Apartment Imports
 export { default as MTable } from "./Apartments/MTable";
