@@ -33,7 +33,7 @@ const AddApartment = () => {
   return (
     <div className="grid grid-cols-1 gap-3">
       <TextField
-        className="rounded-lg border-2 border-gray-400"
+        className="rounded-lg border-2 border-gray-400 p-2 m-1"
         placeholder="540 Kelton Ave"
         type="text"
         label="Apartment"
