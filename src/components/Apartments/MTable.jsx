@@ -21,8 +21,9 @@ const MTable = ({ ApartmentProp }) => {
             <TableRow>
               <TableCell>Apartment</TableCell>
               <TableCell align="right">Rent</TableCell>
-              <TableCell align="right">Rating&nbsp;(1-5)</TableCell>
               <TableCell align="right">Bed/Bath</TableCell>
+              <TableCell align="right">Rating&nbsp;(1-5)</TableCell>
+              <TableCell align="right">Year</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -33,11 +34,12 @@ const MTable = ({ ApartmentProp }) => {
                 </TableCell>
                 <TableCell align="right">${apartment.rent}</TableCell>
                 <TableCell align="right">
-                  <Rating name="read-only" value={apartment.rating} readOnly />
-                </TableCell>
-                <TableCell align="right">
                   {apartment.beds}B/{apartment.baths}B
                 </TableCell>
+                <TableCell align="right">
+                  <Rating name="read-only" value={apartment.rating} readOnly />
+                </TableCell>
+                <TableCell align="right">{apartment.year}</TableCell>
               </TableRow>
             ))}
           </TableBody>

@@ -1,7 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import { db } from "../firebase-config";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, query, where, orderBy } from "firebase/firestore";
 import { MTable } from "@/components";
 
 const MainTable = () => {
@@ -10,7 +10,7 @@ const MainTable = () => {
 
   useEffect(() => {
     const getApartments = async () => {
-      const q = query(collection(db, "apartments"));
+      const q = query(collection(db, "apartments"), orderBy("year", "desc"));
       const data = await getDocs(q);
       setApartments(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };

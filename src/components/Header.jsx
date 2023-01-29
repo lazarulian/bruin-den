@@ -33,6 +33,12 @@ export default function Header() {
             apartments
           </span>
         </Link>
+        <Link href="/search">
+          <span className="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">
+            {" "}
+            search
+          </span>
+        </Link>
         <Link href="/add-apartment">
           {/* change to create listing */}
           <span className="font-serif align-text-bottom pr-5 hover:text-red-300 duration-300">

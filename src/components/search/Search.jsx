@@ -1,8 +1,20 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { collection, getDocs, query, where } from "firebase/firestore";
+import { collection, getDocs, orderBy, query, where } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import { MTable } from "..";
+
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+import { Line } from "react-chartjs-2";
 
 const Search = () => {
   const [search, setSearch] = useState("");
@@ -11,14 +23,50 @@ const Search = () => {
   const getApartments = async (search) => {
     const q = query(
       collection(db, "apartments"),
-      where("address", "==", search)
+      where("address", "==", search),
+      orderBy("year")
     );
     const data = await getDocs(q);
     setApartments(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
+  ChartJS.register(
+    CategoryScale,
+    LinearScale,
+    PointElement,
+    LineElement,
+    Title,
+    Tooltip,
+    Legend
+  );
+
+  const data = {
+    labels: apartments.map((apartment) => apartment.year),
+    datasets: [
+      {
+        label: "Price Trajectory",
+        data: apartments.map((apartment) => apartment.rent),
+        borderColor: "rgb(53, 162, 235)",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
+      },
+    ],
+  };
+
+  const options = {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top",
+      },
+      title: {
+        display: true,
+        text: "Apartment Annual Lease Price Over Time (Years)",
+      },
+    },
+  };
+
   return (
-    <div className="text-center mb-2 py-6 bg-slate-50 rounded-lg h-screen">
+    <div className="text-center mb-2 py-6 bg-slate-50 rounded-lg">
       <div className="flex justify-center">
         <h1 className="text-3xl font-semibold">Experimental Search</h1>
       </div>
@@ -51,14 +99,14 @@ const Search = () => {
               </div>
               <input
                 type="text"
-                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
                 placeholder="540 Kelton Ave..."
                 onChange={(event) => {
                   setSearch(event.target.value);
                 }}
               />
               <button
-                className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white absolute right-2.5 bottom-2.5 bg-sky-800 hover:opacity-50 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 duration-300"
                 onClick={() => {
                   getApartments(search);
                 }}
@@ -69,7 +117,17 @@ const Search = () => {
           </div>
         </div>
       </div>
-      {apartments && <MTable ApartmentProp={apartments} />}
+
+      <div className="grid grid-cols-2 gap-2">
+        <div className="col col-span-1">
+          <div className="mx-4 mt-8 bg-white rounded-lg">
+            {apartments && <Line options={options} data={data} />}
+          </div>
+        </div>
+        <div className="col col-span-1">
+          {apartments && <MTable ApartmentProp={apartments} />}
+        </div>
+      </div>
     </div>
   );
 };
