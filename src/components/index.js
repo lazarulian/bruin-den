@@ -11,6 +11,7 @@ export { default as AboutUs } from "./About/AboutUs";
 export { default as Facts } from "./About/Facts";
 export { default as Info } from "./About/Info";
 export { default as House} from "./About/House";
+export { default as Paragraphs} from "./About/Paragraphs";
 export { default as About } from "./About";
 
 // Apartment Imports

@@ -4,7 +4,7 @@ import HouseImg from "../../../public/assets/HouseImage.png"
 
 const House = () => {
   return (
-    <div className='bg-slate-50 grid grid-cols-6 gap-2'>
+    <div className='bg-white grid grid-cols-6 gap-2'>
         <div className = 'col col-span-2' ></div>
 
         <div className = 'text-center col col-span-2 flex items-center justify-center'>   

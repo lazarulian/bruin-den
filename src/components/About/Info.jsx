@@ -13,8 +13,8 @@ const Info = () => {
             leave their homes due to rejection or abuse from family members
         </div>
         <div className ='text-center col col-span-2  pl-28 pr-28 pt-5'>
-        LGBTQIA members with unstable housing report worse school 
-        functioning, higher substance use, and poorer mental health
+          LGBTQIA members with unstable housing report worse school 
+            functioning, higher substance use, and poorer mental health
         </div>
 
     </div>
