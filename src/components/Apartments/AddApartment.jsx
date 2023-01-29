@@ -2,6 +2,7 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { db } from "../../firebase-config";
 import { collection, getDocs, addDoc, where, query } from "firebase/firestore";
+import TextField from "@mui/material/TextField";
 
 const AddApartment = () => {
   const apartmentsCollectionRef = collection(db, "apartments");
@@ -30,64 +31,71 @@ const AddApartment = () => {
   };
 
   return (
-    <div>
-      <input
-        className="rounded-lg border-2 border-gray-400 p-2 m-1"
-        placeholder="Apartment"
+    <div className="grid grid-cols-1 gap-3">
+      <TextField
+        className="rounded-lg border-2 border-gray-400"
+        placeholder="540 Kelton Ave"
         type="text"
+        label="Apartment"
         required
         onChange={(event) => {
           setNewAddress(event.target.value);
         }}
       />
-      <input
+      <TextField
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
-        placeholder="Rent"
+        placeholder="4000"
+        label="Rent"
         required
         onChange={(event) => {
           setNewRent(event.target.value);
         }}
       />
-      <input
+      <TextField
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
-        placeholder="Year"
+        placeholder="2023"
+        label="Year"
         required
         onChange={(event) => {
           setNewYear(event.target.value);
         }}
       />
-      <input
+      <TextField
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
-        placeholder="Rating"
+        placeholder="4"
+        label="Rating"
         required
         onChange={(event) => {
           setNewRating(parseInt(event.target.value));
         }}
       />
-      <input
+      <TextField
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
-        placeholder="Street Name"
+        placeholder="Kelton"
+        label="Street Name"
         required
         onChange={(event) => {
           setNewStreetName(event.target.value.toLowerCase());
         }}
       />
-      <input
+      <TextField
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
-        placeholder="Number of Beds"
+        placeholder="2"
+        label="Number of Beds"
         required
         onChange={(event) => {
           setNumBed(parseInt(event.target.value));
         }}
       />
-      <input
+      <TextField
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         type="number"
-        placeholder="Number of Baths"
+        placeholder="2"
+        label="Number of Baths"
         required
         onChange={(event) => {
           setNumBath(parseInt(event.target.value));
