@@ -1,5 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
+import { getFirestore, addDoc } from "firebase/firestore";
+  
 import { getAuth, getRedirectResult, GoogleAuthProvider } from "firebase/auth";
 import React from "react";
 import { LoginForm, RegisterUser } from "@/components";
@@ -23,4 +24,4 @@ const db = getFirestore(app);
 const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
-export {app, db, auth, provider};
+export {db, auth, provider};
