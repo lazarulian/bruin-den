@@ -13,12 +13,6 @@ import "/src/firebase-config.js";
 const process = async () => {
   signInWithPopup(auth, provider);
 
-  // .then((result) => {
-  //   // gives a Google Access Token, used to access the Google API.
-  //   const credential = GoogleAuthProvider.credentialFromResult(result);
-  //   const token = credential.accessToken;
-  //   const user = result.user; // The signed-in user info.
-  //   // ...
   try {
     const res = await signInWithPopup(auth, googleProvider);
     const user = res.user;

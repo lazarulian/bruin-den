@@ -86,12 +86,15 @@ const AddApartment = () => {
         }}
       />
       <br></br>
+      
       <button
         className="bg-gray-200 rounded-md p-3 m-2 hover:bg-gray-600 hover:text-white duration-200"
         onClick={createApartment}
       >
+        
         Create Apartment
       </button>
+      
     </div>
   );
 };
