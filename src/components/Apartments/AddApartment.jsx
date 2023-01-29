@@ -66,7 +66,7 @@ const AddApartment = () => {
         className="rounded-lg border-2 border-gray-400 p-2 m-1"
         placeholder="Street Name"
         onChange={(event) => {
-          setNewStreetName(event.target.value);
+          setNewStreetName(event.target.value.toLowerCase());
         }}
       />
       <input

@@ -1,9 +1,12 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import { db } from "../firebase-config";
+import { collection, getDocs, query, where } from "firebase/firestore";
+import { MTable } from "@/components";
 
-const Kelton = () => {
+const MainTable = () => {
   const [apartments, setApartments] = useState([]);
   const apartmentsCollectionRef = collection(db, "apartments");
-  const [newSearch, setNewSearch] = useState("");
 
   useEffect(() => {
     const getApartments = async () => {
@@ -14,11 +17,7 @@ const Kelton = () => {
     getApartments();
   }, []);
 
-  return (
-    <div>
-      <h1>Cheeks</h1>
-    </div>
-  );
+  return <div>{apartments && <MTable ApartmentProp={apartments} />}</div>;
 };
 
-export default Kelton;
+export default MainTable;
