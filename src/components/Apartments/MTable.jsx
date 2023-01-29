@@ -12,12 +12,12 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
+import Rating from "@mui/material/Rating";
 import { visuallyHidden } from "@mui/utils";
 
 const MTable = () => {
   const [apartments, setApartments] = useState([]);
   const apartmentsCollectionRef = collection(db, "apartments");
-
   const [newSearch, setNewSearch] = useState("");
 
   useEffect(() => {
@@ -48,7 +48,9 @@ const MTable = () => {
                   {apartment.address}
                 </TableCell>
                 <TableCell align="right">{apartment.rent}</TableCell>
-                <TableCell align="right">{apartment.rating}</TableCell>
+                <TableCell align="right">
+                  <Rating name="read-only" value={apartment.rating} readOnly />
+                </TableCell>
                 <TableCell align="right">
                   {apartment.beds}B/{apartment.baths}B
                 </TableCell>
