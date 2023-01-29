@@ -40,6 +40,9 @@ export default function Header() {
             add lease
           </span>
         </Link>
+        <Link href='/resources'>
+        <span class = "font-serif align-text-bottom pr-5 hover:text-red-300 duration-300"> resources </span>
+        </Link>
       </div>
 
       <div className="col col-span-2 flex items-center justify-center pl-8">
@@ -47,7 +50,9 @@ export default function Header() {
         <Link href="/">
           <BiHomeAlt className="mx-1" />
         </Link>
-        <BiUser className="mx-1" />
+        <Link href="/login">
+          <BiUser className="mx-1" />
+        </Link>
         <BiWorld className="mx-1" />
       </div>
     </div>
