@@ -25,7 +25,9 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-icons": "^4.7.1"
+    "react-icons": "^4.7.1",
+    "react-tsparticles": "^2.8.0",
+    "tsparticles-engine": "^2.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

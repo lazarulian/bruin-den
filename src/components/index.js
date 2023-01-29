@@ -11,3 +11,4 @@ export { default as AddApartment } from "./Apartments/AddApartment";
 
 export { default as LoginForm } from "./Login/LoginForm";
 export { default as RegisterUser } from "./Login/RegisterUser";
+export { default as Particle } from "./Particle";
