@@ -8,23 +8,11 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
+import TableSortLabel from "@mui/material/TableSortLabel";
 import Paper from "@mui/material/Paper";
 import Rating from "@mui/material/Rating";
 
 const MTable = ({ ApartmentProp }) => {
-  // const [apartments, setApartments] = useState([]);
-  // const apartmentsCollectionRef = collection(db, "apartments");
-  // const [newSearch, setNewSearch] = useState("");
-
-  // useEffect(() => {
-  //   const getApartments = async () => {
-  //     const q = query(collection(db, "apartments"));
-  //     const data = await getDocs(q);
-  //     setApartments(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-  //   };
-  //   getApartments();
-  // }, []);
-
   return (
     <div className="text-center mx-8 my-2 py-6 bg-slate-50 rounded-lg h-screen">
       <TableContainer component={Paper}>
