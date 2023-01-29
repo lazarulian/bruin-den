@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { MTable, Filters } from "@/components";
+import MainTable from "../services/MainTable";
 
 const apartments = () => {
   return (
@@ -11,7 +12,7 @@ const apartments = () => {
       <div className="flex justify-center">
         <Filters />
       </div>
-      <MTable />
+      <MainTable />
     </div>
   );
 };

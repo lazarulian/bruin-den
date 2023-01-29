@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Filters, MTable } from "../../components";
 import { db } from "../../firebase-config";
 import { collection, getDocs, query } from "firebase/firestore";
+import KeltonTable from "../../services/KeltonTable";
 
 const kelton = () => {
   return (
@@ -13,7 +14,7 @@ const kelton = () => {
       <div className="flex justify-center">
         <Filters />
       </div>
-      <MTable />
+      <KeltonTable />
     </div>
   );
 };

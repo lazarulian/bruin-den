@@ -24,7 +24,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/midvale">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaRainbow />
@@ -32,7 +32,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/veteran">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaShuttleVan />
@@ -40,7 +40,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/glenrock">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaSkiing />
@@ -48,7 +48,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/landfair">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaCouch />
@@ -56,7 +56,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/roebling">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaFire />
@@ -64,7 +64,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/gayley">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaCity />
@@ -72,7 +72,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/ophir">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaShieldAlt />
@@ -80,7 +80,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/strathmore">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaWind />
@@ -88,7 +88,7 @@ const Filters = () => {
           </div>
         </button>
       </Link>
-      <Link href="/">
+      <Link href="/streets/levering">
         <button class="bg-sky-800 hover:opacity-50 duration-300 text-white py-1 m-1 px-3 rounded-full">
           <div className="flex items-center justify-center">
             <FaSatellite />
