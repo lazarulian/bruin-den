@@ -9,7 +9,7 @@ const Couches = () => {
         <Image src={Logo} height = {300} width={300} alt="Logo"/>
       </div>
       <div className="flex justify-center">
-        <h1 className = "text-white m-10"> A qwer hacks project</h1>
+        <h1 className = "text-white text-3xl mb-10"> A Qwer Hacks Project </h1>
       </div>
     </div>
     
