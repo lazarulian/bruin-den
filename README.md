@@ -6,3 +6,4 @@ The goal of Bruin Den is to help mitigate exploitative practices in the real est
 
 This project was built for the 2023 QWER Hacks hackathon at UCLA. It uses Next.js and Firebase, with Material UI and Tailwind CSS for the content styling.
 
+https://bruin-den.vercel.app/
