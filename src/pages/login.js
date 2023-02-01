@@ -13,10 +13,9 @@ import "/src/firebase-config.js";
 
 
 const process = async () => {
-  signInWithPopup(auth, provider);
 
   try {
-    const res = await signInWithPopup(auth, googleProvider);
+    const res = await signInWithPopup(auth, provider);
     const user = res.user;
     const q = query(collection(db, "users"), where("uid", "==", user.uid));
     const docs = await getDocs(q);
